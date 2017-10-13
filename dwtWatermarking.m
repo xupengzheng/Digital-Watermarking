@@ -1,9 +1,9 @@
-ï»¿clc;
+clc;
 clear all;
-alpha=5; %alphaç”¨äºæ§åˆ¶åµŒå…¥å¼ºåº¦
-watermarkImpath=['C:\Users\xpz\Desktop\à¸™ï£‡.bmp';'C:\Users\xpz\Desktop\à¸™à¸„.bmp';'C:\Users\xpz\Desktop\à¸”à¹“.bmp'];%ä¸‰å¹…äºŒå€¼æ°´å°å›¾åƒï¼Œå¤§å°48*48
-sourceImagepath='C:\Users\xpz\Desktop\lena_std.tif';%åŸå›¾åƒ
-watermarkedpath='C:\Users\xpz\Desktop\lena_std_watermarked.tif';%åŠ å…¥æ°´å°åçš„å›¾åƒçš„å­˜å‚¨è·¯å¾„
+alpha=5; %alpha¿ØÖÆË®Ó¡µÄÇ¿¶È
+watermarkImpath=['C:\Users\xpz\Desktop\¹ş.bmp';'C:\Users\xpz\Desktop\¹¤.bmp';'C:\Users\xpz\Desktop\´ó.bmp'];%´ıÇ¶ÈëµÄÈı·ùÍ¼Ïñ3*48*48
+sourceImagepath='C:\Users\xpz\Desktop\lena_std.tif';%Ô­Í¼Ïñ
+watermarkedpath='C:\Users\xpz\Desktop\lena_std_watermarked.tif';%Ç¶ÈëË®Ó¡ºóµÄÍ¼ÏñµÄ´æ´¢Â·¾¶
 sourceimage=imread(sourceImagepath);
 for i=1:3;
     watermarkIm(:,:,i)=imread(watermarkImpath(i,:));

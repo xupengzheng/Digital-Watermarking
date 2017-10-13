@@ -1,11 +1,12 @@
 clc;
 clear all;
-sourceImagepath='C:\Users\xpz\Desktop\lena_std.tif';  %åŸå›¾åƒè·¯å¾„
-watermarkedpath='C:\Users\xpz\Desktop\lena_std_watermarked.tif'; %å¾…æå–å›¾åƒè·¯å¾„
+sourceImagepath='C:\Users\xpz\Desktop\lena_std.tif';  %Ô­Í¼ÏñÂ·¾¶
+watermarkedpath='C:\Users\xpz\Desktop\lena_std_watermarked.tif'; %´ıÌáÈ¡Ë®Ó¡µÄÍ¼ÏñµÄÂ·¾¶
 sourceimage=imread(sourceImagepath);
 watermarkedimage=imread(watermarkedpath);
+%watermarkedimage = imnoise(watermarkedimage,'gaussian',0,0.01); %¿ÉÓÃ¸ÃÓï¾ä¼Ó¸ßË¹ÔëÉù¸ÉÈÅ
 wmExtra=watermarkExtra(watermarkedimage,sourceimage);
-%ç”»å‡ºæå–å‡ºçš„æ°´å°å›¾åƒ
+%ÏÔÊ¾ÌáÈ¡³öµÄÈı·ùÍ¼Ïñ
 figure();
 for i=1:3
     subplot(1,3,i);
