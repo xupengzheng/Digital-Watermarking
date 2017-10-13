@@ -1,0 +1,3 @@
+dwtWatermarking 是水印嵌入主程序，读入待嵌入的三幅图像，一幅原图，通过调用watermarkEmbed()函数完成水印的嵌入并返回嵌入水印后的图像。
+dwtWatermarkExtra 是水印提取主程序，读入包含水印的图像，源图像，通过调用watermarkExtra()函数完成水印提取并返回提取出的水印图像数据。
+在图像嵌入和提取的过程中涉及到用正交码编码和解码，这一功能通过调用子函数walshcode()和walshdecode()完成。

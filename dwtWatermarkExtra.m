@@ -1,22 +1,13 @@
 clc;
 clear all;
-sourceImagepath='C:\Users\xpz\Desktop\lena_std.tif';
-%watermarkedpath2='C:\Users\xpz\Desktop\lena_std_watermarked_30.jpf';
-watermarkedpath='C:\Users\xpz\Desktop\lena_std_watermarked.tif';
+sourceImagepath='C:\Users\xpz\Desktop\lena_std.tif';  %原图像路径
+watermarkedpath='C:\Users\xpz\Desktop\lena_std_watermarked.tif'; %待提取图像路径
 sourceimage=imread(sourceImagepath);
 watermarkedimage=imread(watermarkedpath);
-cc =imread(watermarkedpath);
-J = imnoise(cc,'gaussian',0,0.01);
-imshow(J);
-%wmExtra1=watermarkExtra(watermarkedimage,sourceimage);
-wmExtra2=watermarkExtra(J,sourceimage);
-% figure();
-% for i=1:3
-%     subplot(1,3,i)
-%     imshow(wmExtra1(:,:,i));
-% end
+wmExtra=watermarkExtra(watermarkedimage,sourceimage);
+%画出提取出的水印图像
 figure();
 for i=1:3
     subplot(1,3,i);
-    imshow(wmExtra2(:,:,i));
+    imshow(wmExtra(:,:,i));
 end
