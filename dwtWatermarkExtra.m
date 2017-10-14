@@ -1,7 +1,7 @@
 clc;
 clear all;
-sourceImagepath='C:\Users\xpz\Desktop\lena_std.tif';  %原图像路径
-watermarkedpath='C:\Users\xpz\Desktop\lena_std_watermarked.tif'; %待提取水印的图像的路径
+sourceImagepath='lena_std.tif';  %原图像路径
+watermarkedpath='lena_std_watermarked.tif'; %待提取水印的图像的路径
 sourceimage=imread(sourceImagepath);
 watermarkedimage=imread(watermarkedpath);
 %watermarkedimage = imnoise(watermarkedimage,'gaussian',0,0.01); %可用该语句加高斯噪声干扰
